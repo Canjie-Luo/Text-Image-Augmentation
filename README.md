@@ -1,6 +1,6 @@
 # Scene Text Image Transformer
 
-[![Build Status](https://travis-ci.org/Canjie-Luo/SceneTextImageTransformer.svg?branch=master)](https://travis-ci.org/Canjie-Luo/SceneTextImageTransformer)
+[![Build Status](https://travis-ci.org/Canjie-Luo/Scene-Text-Image-Transformer.svg?branch=master)](https://travis-ci.org/Canjie-Luo/Scene-Text-Image-Transformer)
 
 A tool for scene text data augmentation. We provide the tool to avoid overfitting and gain robustness of models.
 
