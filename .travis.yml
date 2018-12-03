@@ -1,0 +1,27 @@
+sudo: required
+
+language: cpp
+compiler: g++
+
+before_install:
+  - wget https://repo.anaconda.com/miniconda/Miniconda2-latest-Linux-x86_64.sh -O conda.sh
+  - chmod +x conda.sh
+  - "./conda.sh -b"
+  - export PATH=/home/travis/miniconda2/bin:$PATH
+  - conda update --yes conda
+  
+install:
+  - conda install pip --yes
+  - sudo sudo apt-get install python-numpy
+  - pip install numpy
+  - conda install cmake --yes
+  - conda install boost --yes
+  - conda install --channel https://conda.anaconda.org/menpo opencv --yes
+  
+script:
+  - echo ${PATH}
+  - mkdir build
+  - cd build
+  - pwd
+  - cmake -D CUDA_USE_STATIC_CUDA_RUNTIME=OFF ..
+  - make
