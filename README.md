@@ -60,8 +60,8 @@ We compare the accuracy of [CRNN](https://github.com/meijieru/crnn.pytorch) trai
 
 | <center>Dataset</center> | <center>IIIT5K</center> | <center>IC13</center> | <center>IC15</center> |
 | :---: | :---: | :---: | :---:|
-| Without Data Augment | <center>40.8%</center> | <center>6.8%</center> | <center>8.7%</center> |
-| <center>With Data Augment</center> | <center>53.4%</center> | <center>9.6%</center> | <center>24.9%</center> | 
+| Without Data Augmentation | <center>40.8%</center> | <center>6.8%</center> | <center>8.7%</center> |
+| <center>With Data Augmentation</center> | <center>53.4%</center> | <center>9.6%</center> | <center>24.9%</center> | 
 
 
 ## Citation
