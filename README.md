@@ -4,7 +4,7 @@
 
 A tool for scene text data augmentation. We provide the tool to avoid overfitting and gain robustness of models.
 
-We are now focusing on the shape of cropped scene text. The next version for both detection and recognition tasks will be released soon. 
+We are now focusing on the shape of the cropped scene text. The next version for both detection and recognition tasks will be released soon. 
 
 ## Requirements
 
