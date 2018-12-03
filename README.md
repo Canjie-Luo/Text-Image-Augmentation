@@ -56,7 +56,7 @@ To transform an image with size (H:64, W:200), it takes less than 3ms using a 2.
 
 ## Improvement for Recognition
 
-We compare the accuracy of [CRNN](https://github.com/meijieru/crnn.pytorch) trained using only the corresponding small training set.
+We compare the accuracies of [CRNN](https://github.com/meijieru/crnn.pytorch) trained using only the corresponding small training set.
 
 | <center>Dataset</center> | <center>IIIT5K</center> | <center>IC13</center> | <center>IC15</center> |
 | :---: | :---: | :---: | :---:|
