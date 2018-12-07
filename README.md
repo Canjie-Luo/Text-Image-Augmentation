@@ -8,6 +8,7 @@ We are now focusing on the shape of the cropped scene text image. The next versi
 
 ## Requirements
 
+- [GCC](https://gcc.gnu.org/gcc-4.8/) 4.8.*
 - [Python](https://www.python.org/) 2.7.*
 - [Boost](https://www.boost.org/) 1.67
 - [OpenCV](https://opencv.org/) 2.4.*
