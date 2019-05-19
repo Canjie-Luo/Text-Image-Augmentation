@@ -1,40 +1,55 @@
 # Scene Text Image Transformer
 
-[![Build Status](https://travis-ci.org/Canjie-Luo/Scene-Text-Image-Transformer.svg?branch=master)](https://travis-ci.org/Canjie-Luo/Scene-Text-Image-Transformer)
-
 A tool for scene text data augmentation. We provide the tool to avoid overfitting and gain robustness of models.
 
 We are now focusing on the shape of the cropped scene text image. The next version for both detection and recognition tasks will be released later. 
 
+__NEW__: adapted for Mac/py3.
+
 ## Requirements
 
-- [GCC](https://gcc.gnu.org/gcc-4.8/) 4.8.*
-- [Python](https://www.python.org/) 2.7.*
-- [Boost](https://www.boost.org/) 1.67
-- [OpenCV](https://opencv.org/) 2.4.*
+- [gcc/clang](https://download.developer.apple.com/Developer_Tools/Command_Line_Tools_macOS_10.14_for_Xcode_10.2.1.dmg/Command_Line_Tools_macOS_10.14_for_Xcode_10.2.1.dmg): comes w/ Xcode CLT
+- [Python](https://www.python.org/): 3.6.*
+- [Boost](https://www.boost.org/): 1.69.0
+- [OpenCV](https://opencv.org/): 2.4.*
 
-We recommend [Anaconda](https://www.anaconda.com/) to manage the version of your dependencies. For example:
+We recommend [Homebrew](https://brew.sh/) to manage dependencies on Mac. For example:
 
 ```bash
-     conda install boost=1.67.0
+brew install boost-python3
+brew install opencv@2
 ```
 
 ## Installation
+
+Check `CMakeLists.txt` by providing the correct paths for `PYTHON_LIBRARY`, `PYTHON_INCLUDE_DIR` and `OpenCV_DIR`.
+
 Build library:
 
 ```bash
-    mkdir build
-    cd build
-    cmake -D CUDA_USE_STATIC_CUDA_RUNTIME=OFF ..
-    make
+mkdir build
+cd build
+cmake -D CUDA_USE_STATIC_CUDA_RUNTIME=OFF ..
+make
 ```
 
-Copy the **Augment.so** to the target folder and follow **demo.py** to use the tool.
+__NOTE__: if it fails compiling due to no access to numpy's headers, make sure you specify it with `make`:
 
 ```bash
-    cp Augment.so ..
-    cd ..
-    python demo.py
+CPLUS_INCLUDE_PATH="${CPLUS_INCLUDE_PATH}:/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/numpy/core/include" make
+```
+
+With luck, you now get a `Augment.dylib` in the `build` directory. Make a soft link to it and name the link `*.so` for Python to handle the import (Python can't import a `*.dylib` as a module, don't know why):
+
+```bash
+ln -s Augment.dylib ../Augment.so
+```
+
+Run the demo:
+
+```bash
+cd ..
+python3 demo.py
 ```
 
 ## Demo
