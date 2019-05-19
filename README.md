@@ -39,16 +39,11 @@ __NOTE__: if it fails compiling due to no access to numpy's headers, make sure y
 CPLUS_INCLUDE_PATH="${CPLUS_INCLUDE_PATH}:/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/numpy/core/include" make
 ```
 
-With luck, you now get a `Augment.dylib` in the `build` directory. Make a soft link to it and name the link `*.so` for Python to handle the import (Python can't import a `*.dylib` as a module, don't know why):
-
-```bash
-ln -s Augment.dylib ../Augment.so
-```
-
-Run the demo:
+With luck, you now get a `Augment.dylib` in the `build` directory. Make a soft link to it and name the link `*.so` for Python to handle the import and run the demo:
 
 ```bash
 cd ..
+ln -s build/Augment.dylib Augment.so
 python3 demo.py
 ```
 
