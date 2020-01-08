@@ -1,10 +1,10 @@
-# Scene Text Image Transformer
+# Text Image Augmentation
 
-[![Build Status](https://travis-ci.org/Canjie-Luo/Scene-Text-Image-Transformer.svg?branch=master)](https://travis-ci.org/Canjie-Luo/Scene-Text-Image-Transformer)
+[![Build Status](https://travis-ci.org/Canjie-Luo/Text-Image-Augmentation.svg?branch=master)](https://travis-ci.org/Canjie-Luo/Text-Image-Augmentation)
 
 A tool for scene text data augmentation. We provide the tool to avoid overfitting and gain robustness of models.
 
-We are now focusing on the shape of the cropped scene text image. The next version for both detection and recognition tasks will be released later. 
+We are now focusing on the shape of the cropped scene text image. 
 
 ## Requirements
 
