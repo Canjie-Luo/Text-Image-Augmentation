@@ -81,7 +81,7 @@ We compare the accuracies of [CRNN](https://github.com/meijieru/crnn.pytorch) tr
   author = {Canjie Luo, Yuanzhi Zhu, Lianwen Jin, Yongpan Wang},
   title = {Learn to Augment: Joint Data Augmentation and Network Optimization for Text Recognition},
   booktitle = {CVPR},
-  Year = {2020}
+  year = {2020}
 }
 
 @InProceedings{wang2020decoupled,
