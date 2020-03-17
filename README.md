@@ -2,9 +2,18 @@
 
 [![Build Status](https://travis-ci.org/Canjie-Luo/Text-Image-Augmentation.svg?branch=master)](https://travis-ci.org/Canjie-Luo/Text-Image-Augmentation)
 
-A tool for scene text data augmentation. We provide the tool to avoid overfitting and gain robustness of models.
+A general geometric augmentation tool for text images in the CVPR 2020 paper "[Learn to Augment: Joint Data Augmentation and Network Optimization for Text Recognition]()". We provide the tool to avoid overfitting and gain robustness of text recognizers. 
 
-We are now focusing on the shape of the cropped scene text image. 
+***Note that this is a general toolkit. Please customize for your specific task. If the repo benefits your work, please [cite the papers](https://github.com/Canjie-Luo/Text-Image-Augmentation#citation).***
+
+## News
+- 2020-02 The paper "Learn to Augment: Joint Data Augmentation and Network Optimization for Text Recognition" was accepted to ***CVPR 2020***. It is a preliminary attempt for smart augmentation. 
+
+- 2019-11 The paper "Decoupled Attention Network for Text Recognition" ([Paper](https://arxiv.org/abs/1912.10205) [Code](https://github.com/Wang-Tianwei/Decoupled-attention-network)) was accepted to ***AAAI 2020***. This augmentation tool was used in the experiments of handwritten text recognition.
+
+- 2019-04 We applied this tool in the ReCTS competition of ***ICDAR 2019***. Our ensemble model won the championship.
+
+- 2019-01 The similarity transformation was specifically customized for geomeric augmentation of text images. 
 
 ## Requirements
 
@@ -68,20 +77,40 @@ We compare the accuracies of [CRNN](https://github.com/meijieru/crnn.pytorch) tr
 ## Citation
 
 ```
-@inproceedings{schaefer2006image,
+@inproceedings{luo2020learn,
+	author = {Canjie Luo, Yuanzhi Zhu, Lianwen Jin, Yongpan Wang},
+	title = {Learn to Augment: Joint Data Augmentation and Network Optimization for Text Recognition},
+	booktitle = {CVPR},
+	Year = {2020}
+}
+
+@InProceedings{wang2020decoupled,
+  author = {Tianwei Wang and Yuanzhi Zhu and Lianwen Jin and Canjie Luo and Xiaoxue Chen and Yaqiang Wu and Qianying Wang and Mingxiang Cai}, 
+  title = {Decoupled attention network for text recognition}, 
+  booktitle ={AAAI}, 
+  year = {2020}
+}
+
+@article{schaefer2006image,
   title={Image deformation using moving least squares},
   author={Schaefer, Scott and McPhail, Travis and Warren, Joe},
-  booktitle={ACM transactions on graphics (TOG)},
+  journal={ACM Transactions on Graphics (TOG)},
   volume={25},
   number={3},
   pages={533--540},
   year={2006},
-  organization={ACM}
+  publisher={ACM New York, NY, USA}
 }
 ```
 
 ## Acknowledgment
-The tool is the combination of [@cxcxcxcx's](https://github.com/cxcxcxcx) [imgwarp-opencv](https://github.com/cxcxcxcx/imgwarp-opencv) and [@Yati Sagade's](https://github.com/yati-sagade) [opencv-ndarray-conversion](https://github.com/yati-sagade/opencv-ndarray-conversion). Thanks for your contribution. 
 
+Thanks for the contribution of the following developers.
+
+[@keeofkoo](https://github.com/keeofkoo)
+
+[@cxcxcxcx](https://github.com/cxcxcxcx)
+
+[@Yati Sagade](https://github.com/yati-sagade) 
 ## Attention
 The tool is only free for academic research purposes.
